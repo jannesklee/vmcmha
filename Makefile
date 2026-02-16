@@ -30,3 +30,10 @@ all: main.out
 clean:
 	$(RM) $(OBJECTS) $(TARGET)
 
+# create obj directory if it doesn't exist
+$(OBJDIR):
+	mkdir -p $(OBJDIR)
+
+# make obj directory a dependency
+$(OBJECTS): | $(OBJDIR)
+
