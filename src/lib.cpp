@@ -531,7 +531,7 @@ void lubksb(double **a, int n, int *indx, double *b)
 
 void tqli(double *d, double *e, int n, double **z)
 {
-   register int   m,l,iter,i,k;
+    int   m,l,iter,i,k;
    double         s,r,p,g,f,dd,c,b;
 
    for(i = 1; i < n; i++) e[i-1] = e[i];
@@ -596,7 +596,7 @@ void tqli(double *d, double *e, int n, double **z)
 
  void tred2(double **a, int n, double *d, double *e)
  {
-    register int    l,k,j,i;
+     int    l,k,j,i;
     double          scale,hh,h,g,f;
 
     for(i = n - 1; i > 0; i--) {
@@ -1471,7 +1471,7 @@ double gaussian_deviate(long * idum)
   static double gset;
   double fac, rsq, v1, v2;
 
-  if ( idum < 0) iset =0;
+  if ( *idum < 0) iset =0;
   if (iset == 0) {
     do {
       v1 = 2.*ran2(idum) -1.0;
